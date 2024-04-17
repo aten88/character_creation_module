@@ -73,12 +73,12 @@ def choice_char_class(char_name: str) -> Character:
     """
     # Добавили словарь, в котором соотносится ввод
     #  пользователя и класс персонажа.
-    game_classes = {'warrior': Warrior, 'mage': Mage, 'healer': Healer}
+    game_classes = {'Warrior': Warrior, 'Mage': Mage, 'Healer': Healer}
     approve_choice: str = None
     while approve_choice != 'y':
         selected_class = input('Введи название персонажа, '
-                               'за которого хочешь играть: Воитель — warrior, '
-                               'Маг — mage, Лекарь — healer: ')
+                               'за которого хочешь играть: Warrior — Воитель, '
+                               'Mage — Маг ,Healer — Лекарь: ')
         char_class: Character = game_classes[selected_class](char_name)
         # Вывели в терминал описание персонажа.
         print(char_class)
